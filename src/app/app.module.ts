@@ -7,7 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddrecipeComponent } from './addrecipe/addrecipe.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewrecipeComponent } from './viewrecipe/viewrecipe.component';
-
+import{ HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 const appRoutes:Routes=[
   {
   path:"",component:AddrecipeComponent
@@ -26,7 +27,9 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
